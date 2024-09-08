@@ -1,0 +1,123 @@
+jne5140@Jess-Laptop ~
+$ mkdir bmmb852l3
+
+jne5140@Jess-Laptop ~
+$ cd bmmb852l3/
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ wget https://ftp.ensembl.org/pub/current_gff3/salmo_trutta/Salmo_trutta.fSalTru1.1.112.gff3.gz
+--2024-09-07 16:22:45--  https://ftp.ensembl.org/pub/current_gff3/salmo_trutta/Salmo_trutta.fSalTru1.1.112.gff3.gz
+Resolving ftp.ensembl.org (ftp.ensembl.org)... 193.62.193.169
+Connecting to ftp.ensembl.org (ftp.ensembl.org)|193.62.193.169|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 37295419 (36M) [application/x-gzip]
+Saving to: 'Salmo_trutta.fSalTru1.1.112.gff3.gz'
+
+Salmo_trutta.fSalTru1.1 100%[=============================>]  35.57M   592KB/s    in 63s     
+
+2024-09-07 16:23:48 (577 KB/s) - 'Salmo_trutta.fSalTru1.1.112.gff3.gz' saved [37295419/37295419]
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ gunzip Salmo_trutta.fSalTru1.1.112.gff3.gz 
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat Salmo_trutta.fSalTru1.1.112.gff3 | head
+##gff-version 3
+##sequence-region   1 1 81542925
+##sequence-region   10 1 46595448
+##sequence-region   11 1 22956941
+##sequence-region   12 1 97529106
+##sequence-region   13 1 91488822
+##sequence-region   14 1 86253525
+##sequence-region   15 1 66900148
+##sequence-region   16 1 61349433
+##sequence-region   17 1 59764774
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat Salmo_trutta.fSalTru1.1.112.gff3 | tail
+MT      RefSeq  CDS     14383   15523   .       +       0       ID=CDS:ENSSTUP00000000014;Parent=transcript:ENSSTUT00000000036;protein_id=ENSSTUP00000000014
+###
+MT      RefSeq  ncRNA_gene      15524   15595   .       +       .       ID=gene:ENSSTUG00000000037;biotype=Mt_tRNA;gene_id=ENSSTUG00000000037;logic_name=mt_genbank_import;version=1
+MT      RefSeq  tRNA    15524   15595   .       +       .       ID=transcript:ENSSTUT00000000037;Parent=gene:ENSSTUG00000000037;biotype=Mt_tRNA;tag=Ensembl_canonical;transcript_id=ENSSTUT00000000037;version=1
+MT      RefSeq  exon    15524   15595   .       +       .       Parent=transcript:ENSSTUT00000000037;Name=ENSSTUE00000000037;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSSTUE00000000037;rank=1;version=1
+###
+MT      RefSeq  ncRNA_gene      15595   15664   .       -       .       ID=gene:ENSSTUG00000000038;biotype=Mt_tRNA;gene_id=ENSSTUG00000000038;logic_name=mt_genbank_import;version=1
+MT      RefSeq  tRNA    15595   15664   .       -       .       ID=transcript:ENSSTUT00000000038;Parent=gene:ENSSTUG00000000038;biotype=Mt_tRNA;tag=Ensembl_canonical;transcript_id=ENSSTUT00000000038;version=1
+MT      RefSeq  exon    15595   15664   .       -       .       Parent=transcript:ENSSTUT00000000038;Name=ENSSTUE00000000038;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSSTUE00000000038;rank=1;version=1
+###
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat Salmo_trutta.fSalTru1.1.112.gff3 | wc -l
+3589746
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat Salmo_trutta.fSalTru1.1.112.gff3 | grep '##sequence-region' | wc -l
+1441
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat Salmo_trutta.fSalTru1.1.112.gff3 | grep -v '#' > trutta.gff3
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat trutta.gff3 | cut -f 3 | sort | uniq -c | sort | head
+      2 Y_RNA
+      5 J_gene_segment
+     20 scRNA
+     22 tRNA
+     39 D_gene_segment
+     49 transcript
+    132 V_gene_segment
+    400 miRNA
+    581 pseudogene
+    581 pseudogenic_transcript
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat trutta.gff3 | cut -f 3 | sort-uniq-count-rank | head
+1574331 exon
+1521266 CDS
+116381  mRNA
+100180  biological_region
+97513   five_prime_UTR
+71832   three_prime_UTR
+43935   gene
+4441    ncRNA_gene
+2437    lnc_RNA
+1441    region
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat trutta.gff3 | cut -f 3 | sort-uniq-count-rank | tail
+581     pseudogene
+581     pseudogenic_transcript
+400     miRNA
+132     V_gene_segment
+49      transcript
+39      D_gene_segment
+22      tRNA
+20      scRNA
+5       J_gene_segment
+2       Y_RNA
+
+jne5140@Jess-Laptop ~/bmmb852l3
+$ cat trutta.gff3 | cut -f 3 | sort-uniq-count-rank  
+1574331 exon
+1521266 CDS
+116381  mRNA
+100180  biological_region
+97513   five_prime_UTR
+71832   three_prime_UTR
+43935   gene
+4441    ncRNA_gene
+2437    lnc_RNA
+1441    region
+854     snRNA
+757     rRNA
+702     snoRNA
+581     pseudogene
+581     pseudogenic_transcript
+400     miRNA
+132     V_gene_segment
+49      transcript
+39      D_gene_segment
+22      tRNA
+20      scRNA
+5       J_gene_segment
+2       Y_RNA
