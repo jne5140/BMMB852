@@ -24,16 +24,6 @@ cd bmmb852l3
 
 ```python
 wget https://ftp.ensembl.org/pub/current_gff3/salmo_trutta/Salmo_trutta.fSalTru1.1.112.gff3.gz
---2024-09-07 14:08:27--  https://ftp.ensembl.org/pub/current_gff3/salmo_trutta/Salmo_trutta.fSalTru1.1.112.gff3.gz
-Resolving ftp.ensembl.org (ftp.ensembl.org)... 193.62.193.169
-Connecting to ftp.ensembl.org (ftp.ensembl.org)|193.62.193.169|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 37295419 (36M) [application/x-gzip]
-Saving to: 'Salmo_trutta.fSalTru1.1.112.gff3.gz.1'
-
-Salmo_trutta.fSalTru1.1.112.gff 100%[======================================================>]  35.57M   586KB/s    in 63s     
-
-2024-09-07 14:09:30 (582 KB/s) - 'Salmo_trutta.fSalTru1.1.112.gff3.gz.1' saved [37295419/37295419]
 ```
 Find answers to the following questions:
 
