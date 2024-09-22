@@ -119,7 +119,8 @@ Gene Ontology
 
 	ATP Binding: “Binding to ATP, adenosine 5'-triphosphate, a universally important coenzyme and enzyme regulator.” Source: ISBN:0198506732
 	 
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/effd320f-f294-4d64-b94b-64d622adb307)
+
  
 	Glycolytic Process: “The chemical reactions and pathways resulting in the breakdown of a carbohydrate into pyruvate, with the concomitant production of a small amount of ATP and the reduction of NAD(P) to NAD(P)H. Glycolysis begins with the metabolism of a carbohydrate to generate products that can enter the pathway and ends with the production of pyruvate. Pyruvate may be converted to acetyl-coenzyme A, ethanol, lactate, or other small molecules.” Source: GOC:dph, GOC:bf, Wikipedia:Glycolysis, ISBN:0879010479, ISBN:0716720094, ISBN:0201090910
 	 
