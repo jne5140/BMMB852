@@ -3,7 +3,7 @@
 # To make the script executable input: chmod +x ncbi_genome_download.sh
 # To run input: ./ncbi_genome_download.sh
 
-# Define the NCBI download URL (click download on the data, check all of the boxes, go to URL header on specific dataset, copy URL here)
+# Define the NCBI download URL (go to URL header on specific dataset, copy URL here)
 NCBI_URL="https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000146045.2/download?include_annotation_type=GENOME_FASTA&include_annotation_type=GENOME_GFF&include_annotation_type=RNA_FASTA&include_annotation_type=CDS_FASTA&include_annotation_type=PROT_FASTA&include_annotation_type=SEQUENCE_REPORT&hydrated=FULLY_HYDRATED"
 
 # Define output directory
