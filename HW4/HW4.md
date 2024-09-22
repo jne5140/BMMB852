@@ -33,7 +33,8 @@ Add more functions to the script that also print some of their results. Were you
  
 	These are my results from Tram Ha’s data visualized in IGV. It should match their data, however I can’t tell as their images/results are on CANVAS and not on their GitHub repository. 
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/2169af9b-206a-43ca-9fa2-014937a71d02)
+
 
 
 
