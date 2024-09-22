@@ -113,7 +113,8 @@ Gene Ontology
 ...
 
 	Cytoplasmic Region: “Any (proper) part of the cytoplasm of a single cell of sufficient size to still be considered cytoplasm.” Source: GOC:dos
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/d12defc4-4a7c-49be-bf79-fcf076ed057b)
+
 
 
 	ATP Binding: “Binding to ATP, adenosine 5'-triphosphate, a universally important coenzyme and enzyme regulator.” Source: ISBN:0198506732
