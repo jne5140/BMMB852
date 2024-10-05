@@ -26,7 +26,9 @@ Done, script (HW#6_genome_analysis.sh) is located in the HW#6 folder in the GitH
 
 Files used for analysis:
 
- (Insert image)
+![image](https://github.com/user-attachments/assets/d4d47426-e86a-478c-a7e8-d44b4dc74ff4)
+
+
 
 ### 2.	Evaluate the quality of the downloaded data.
  
