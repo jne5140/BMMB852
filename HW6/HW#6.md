@@ -32,7 +32,8 @@ Files used for analysis:
 
 ### 2.	Evaluate the quality of the downloaded data.
  
- (insert Image)
+![image](https://github.com/user-attachments/assets/c96758b8-ecd2-4edd-a2ed-fe2692dc6994)
+
 
 Overall, per base sequence quality, along with per tile sequence quality and per base sequence content all are of poor quality. For the purpose of this assignment, I will focus on improving the per base sequence quality, which is shown below:
 
