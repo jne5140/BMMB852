@@ -37,7 +37,8 @@ Files used for analysis:
 
 Overall, per base sequence quality, along with per tile sequence quality and per base sequence content all are of poor quality. For the purpose of this assignment, I will focus on improving the per base sequence quality, which is shown below:
 
-(insert Image)
+![image](https://github.com/user-attachments/assets/a9c04a65-7235-44ea-97b1-7055df6657cc)
+
  
 ### 3.	Improve the quality of the reads in the dataset.
 Done, script (HW#6_trim_data.sh) is located in the HW#6 folder in the GitHub repository.
