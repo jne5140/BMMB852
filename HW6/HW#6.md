@@ -45,7 +45,8 @@ Done, script (HW#6_trim_data.sh) is located in the HW#6 folder in the GitHub rep
 
 ### 4.	Evaluate the quality again and document the improvements.
  
- (insert Image)
+![image](https://github.com/user-attachments/assets/7337e6c5-9b48-4aea-94d0-eb1f7d53cbbe)
+
 
 The quality after trimming has improved as there are no errors/fails, just warnings. As you can see, the trimming cut all of the worst-quality base sequences in red. 
 
