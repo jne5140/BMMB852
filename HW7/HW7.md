@@ -71,20 +71,26 @@ The variables section defines filenames that can be customizeable.
 - **ADAPTER:** The adapter sequence used for the trimming process
 
 - **ENV_NAME:** Name of micromamba environment used
-### **usage:**
-
+### **usage:** 
 A quick reference guide on the sections in the makefile. 
 
-### **genome:** downloads the genome data and unzips it into a directory. Moves the FASTA file to the current directory and cleans up temporary files.
+### **genome:** 
+downloads the genome data and unzips it into a directory. Moves the FASTA file to the current directory and cleans up temporary files.
 
-### **simulate:** Creates the directory for storing reads. Uses wgsim to simulate reads from the downloaded genome file. Generates two FASTQ files.
+### **simulate:** 
+Creates the directory for storing reads. Uses wgsim to simulate reads from the downloaded genome file. Generates two FASTQ files.
 
-### **download:** Creates the reads directory. Uses fastq-dump to download reads from the SRA using the accession number. Saves reads in the READS_DIR.
+### **download:** 
+Creates the reads directory. Uses fastq-dump to download reads from the SRA using the accession number. Saves reads in the READS_DIR.
 
-### **trim:** Runs FastQC on the raw reads to check their quality. Saves the reports in the REPORTS_DIR. Uses fastp to trim low-quality bases and remove adapter sequences. Runs FastQC again on the trimmed reads to assess their quality and generate reports. Runs multiqc to compile the FastQC reports into a single summary report.
+### **trim:** 
+Runs FastQC on the raw reads to check their quality. Saves the reports in the REPORTS_DIR. Uses fastp to trim low-quality bases and remove adapter sequences. Runs FastQC again on the trimmed reads to assess their quality and generate reports. Runs multiqc to compile the FastQC reports into a single summary report.
 
-### **qc:** Creates the reports directory if it doesn't exist. Runs FastQC on both raw and trimmed reads to generate quality reports.
+### **qc:** 
+Creates the reports directory if it doesn't exist. Runs FastQC on both raw and trimmed reads to generate quality reports.
 
-### **clean:** Removes the genome file, reads directory, and reports directory.
+### **clean:** 
+Removes the genome file, reads directory, and reports directory.
 
-### **all:** Executes all the primary steps above (genome download, read simulation, downloading reads, trimming, and quality control) in order.
+### **all:** 
+Executes all the primary steps above (genome download, read simulation, downloading reads, trimming, and quality control) in order.
