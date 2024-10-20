@@ -9,25 +9,21 @@ Make a new version of the Makefile that includes rules for aligning reads to a r
 
 Add a new target called index and align to the Makefile. The index target should create an index for the reference genome. The align target should align the reads to the reference genome.
 
------------------
-
-#### Done, Makefile is located in Github repository. 
-
--------------------
-
 Visualize the resulting BAM files for your simulated reads and for the reads downloaded from SRA.
-
-![image](https://github.com/user-attachments/assets/0c18fa9f-6439-4941-a586-74507d82309e)
-
-
 
 Generate alignment statistics for the reads from both sources, simulated and SRA.
 Briefly describe the differences between the two datasets.
 
 ------------------------
 
+##### Done, file is located in Github repository.
+
+
+![image](https://github.com/user-attachments/assets/0c18fa9f-6439-4941-a586-74507d82309e)
+
 ### Simulated Reads:
-(Insert Image Here)
+![image](https://github.com/user-attachments/assets/bb30d0c5-d5b9-41ec-adea-fe6c1db2defe)
+
 
 ### SRA Reads:
 (Insert Image Here)
