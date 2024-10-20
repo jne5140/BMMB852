@@ -16,8 +16,7 @@ Briefly describe the differences between the two datasets.
 
 ------------------------
 
-##### Done, file is located in Github repository.
-
+Done, file is located in Github repository.
 
 ![image](https://github.com/user-attachments/assets/0c18fa9f-6439-4941-a586-74507d82309e)
 
@@ -26,8 +25,8 @@ Briefly describe the differences between the two datasets.
 
 
 ### SRA Reads:
-(Insert Image Here)
+![image](https://github.com/user-attachments/assets/23ea81ba-100d-47cc-b389-d893f330d062)
 
-(Insert comparison table image here)
+jndcked
 
 	The simulated reads have a slightly lower mapping rate (97.70%) compared to the SRA reads (99.35%), which indicates the SRA data better aligns to the reference genome. The SRA dataset has fewer singletons (0.60%) than the simulated reads (2.29%), suggesting it captures real sequencing variations better. Properly paired reads are also higher in the SRA dataset (98.59%) versus the simulated reads (95.20%). Overall, while the simulated reads are more of a controlled representation, the SRA reads reflect the complexities of biological data.
