@@ -14,7 +14,7 @@ Visualize the resulting BAM files for your simulated reads and for the reads dow
 Generate alignment statistics for the reads from both sources, simulated and SRA.
 Briefly describe the differences between the two datasets.
 
-------------------------
+___________________________________________________________________________________________________________________________________
 
 Done, file is located in Github repository.
 
@@ -27,6 +27,7 @@ Done, file is located in Github repository.
 ### SRA Reads:
 ![image](https://github.com/user-attachments/assets/23ea81ba-100d-47cc-b389-d893f330d062)
 
-jndcked
+![image](https://github.com/user-attachments/assets/023d5dec-2e2d-4e2c-b2ad-e47d62369d44)
 
-	The simulated reads have a slightly lower mapping rate (97.70%) compared to the SRA reads (99.35%), which indicates the SRA data better aligns to the reference genome. The SRA dataset has fewer singletons (0.60%) than the simulated reads (2.29%), suggesting it captures real sequencing variations better. Properly paired reads are also higher in the SRA dataset (98.59%) versus the simulated reads (95.20%). Overall, while the simulated reads are more of a controlled representation, the SRA reads reflect the complexities of biological data.
+
+The simulated reads have a slightly lower mapping rate (97.70%) compared to the SRA reads (99.35%), which indicates the SRA data better aligns to the reference genome. The SRA dataset has fewer singletons (0.60%) than the simulated reads (2.29%), suggesting it captures real sequencing variations better. Properly paired reads are also higher in the SRA dataset (98.59%) versus the simulated reads (95.20%). Overall, while the simulated reads are more of a controlled representation, the SRA reads are more refletive of actual biological data.
