@@ -58,7 +58,8 @@ __________________________________
 
 	**Filtered SRA reads stats:**
 
-	(Insert Image)
+   	![image](https://github.com/user-attachments/assets/7f7cd827-bfbe-4de6-9b8c-205cd24c35ef)
+
 
  	**Total Reads**
 
