@@ -60,34 +60,34 @@ trim:
 	micromamba run -n $(ENV_NAME) fastqc -q -o $(REPORTS_DIR) $(R1) $(R2)
 
 	@echo "Trimming reads with fastp..."
-	micromamba run -n $(ENV_NAME) fastp --adapter_sequence=$(ADAPTER) --cut_tail \
+	micromamba run fastp --adapter_sequence=$(ADAPTER) --cut_tail \
 	      -i $(R1) -I $(R2) -o $(TRIMMED_R1) -O $(TRIMMED_R2)
 
 	@echo "Running FastQC on trimmed reads..."
-	micromamba run -n $(ENV_NAME) fastqc -q -o $(REPORTS_DIR) $(TRIMMED_R1) $(TRIMMED_R2)
+	micromamba run fastqc -q -o $(REPORTS_DIR) $(TRIMMED_R1) $(TRIMMED_R2)
 
 	@echo "Running MultiQC on reports directory..."
-	micromamba run -n $(ENV_NAME) multiqc -o $(REPORTS_DIR) $(REPORTS_DIR)
+	micromamba run multiqc -o $(REPORTS_DIR) $(REPORTS_DIR)
 
 	@echo "Trimmed reads saved to $(TRIMMED_R1) and $(TRIMMED_R2)"
 
 # Create an index for the reference genome
 index:
 	mkdir -p $(GENOME_INDEX)
-	micromamba run -n $(ENV_NAME) bwa index -p $(GENOME_INDEX)/genome $(GENOME_FILE)
+	micromamba run bwa index -p $(GENOME_INDEX)/genome $(GENOME_FILE)
 	@echo "Index created in $(GENOME_INDEX)"
 
 # Align reads to the reference genome
 align: 
 	mkdir -p $(BAM_DIR)
-	micromamba run -n $(ENV_NAME) bwa mem $(GENOME_INDEX)/genome $(TRIMMED_R1) $(TRIMMED_R2) | samtools view -Sb - | samtools sort -o $(SRA_BAM)
-	micromamba run -n $(ENV_NAME) bwa mem $(GENOME_INDEX)/genome $(R1) $(R2) | samtools view -Sb - | samtools sort -o $(SIM_BAM)
+	micromamba run bwa mem $(GENOME_INDEX)/genome $(TRIMMED_R1) $(TRIMMED_R2) | samtools view -Sb - | samtools sort -o $(SRA_BAM)
+	micromamba run bwa mem $(GENOME_INDEX)/genome $(R1) $(R2) | samtools view -Sb - | samtools sort -o $(SIM_BAM)
 	@echo "Aligned reads saved to $(SRA_BAM) and $(SIM_BAM)"
 
 # Create BAM index files
 index_bam:
-	micromamba run -n $(ENV_NAME) samtools index $(SRA_BAM)
-	micromamba run -n $(ENV_NAME) samtools index $(SIM_BAM)
+	micromamba run samtools index $(SRA_BAM)
+	micromamba run samtools index $(SIM_BAM)
 	@echo "Index files created for BAM files"
 
 # Clean up all files
@@ -101,9 +101,9 @@ clean:
 
 # Generate alignment statistics
 stats:
-	micromamba run -n $(ENV_NAME) samtools flagstat $(SIM_BAM) > $(SIM_STATS)
+	micromamba run samtools flagstat $(SIM_BAM) > $(SIM_STATS)
 	@echo "Alignment statistics for simulated reads saved to $(SIM_STATS)"
-	micromamba run -n $(ENV_NAME) samtools flagstat $(SRA_BAM) > $(SRA_STATS)
+	micromamba run samtools flagstat $(SRA_BAM) > $(SRA_STATS)
 	@echo "Alignment statistics for SRA reads saved to $(SRA_STATS)"
 
 # Run everything
