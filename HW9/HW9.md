@@ -20,8 +20,9 @@ In your report, show the commands and the answers for each of these questions:
 
 __________________________________
 	micromamba run samtools flagstat sra_reads.bam > sra_reads.stats.txt
- 
- (insert image here)
+
+ ![image](https://github.com/user-attachments/assets/2df7632b-2a9e-438e-8a4c-19b4111a5621)
+
 
 1.	Primary reads: 18,118
 
@@ -52,7 +53,8 @@ __________________________________
 	
 	**Original SRA reads stats:**
 
-	(Insert Image)
+	![image](https://github.com/user-attachments/assets/d37cc4e9-6559-48fc-9241-39ae60867cbe)
+
 
 	**Filtered SRA reads stats:**
 
