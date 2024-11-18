@@ -23,7 +23,8 @@ VARIANTS_VCF=$(BAM_DIR)/variants.vcf
 ANNOTATED_VCF=$(BAM_DIR)/variants_annotated.vcf
 VEP_OUTPUT=$(BAM_DIR)/variants_vep.txt
 SNPEFF_OUTPUT=$(BAM_DIR)/variants_snpeff.vcf
-SNPEFF_DB=Ecoli
+SNPEFF_DB=Escherichia_coli_str_k_12_substr_mg1655
+
 
 # Directory
 usage:
@@ -120,18 +121,6 @@ annotate: $(VARIANTS_VCF)
 	micromamba run -n $(ENV_NAME) snpEff -Xmx4g $(SNPEFF_DB) $(VARIANTS_VCF) > $(SNPEFF_OUTPUT)
 	@echo "Annotation completed using snpEff. Output saved to $(SNPEFF_OUTPUT)"
 
-# Extract high-impact variants
-filter_impact:
-	@echo "Filtering high-impact variants..."
-	bcftools view -i 'EFF[*] ~ "HIGH"' bam/variants_snpeff.vcf > bam/variants_high_impact.vcf
-	@echo "High-impact variants saved to bam/variants_high_impact.vcf"
-
-# Generate summary statistics of the variants
-summary_stats:
-	@echo "Generating variant effect summary..."
-	grep -v "^#" bam/variants_snpeff.vcf | cut -f 8 | cut -d '|' -f 2 | sort | uniq -c > bam/variant_effect_summary.txt
-	@echo "Variant effect summary saved to bam/variant_effect_summary.txt"
-
 # Run everything
-all: genome simulate download trim index align index_bam stats filter variants annotate filter_impact summary_stats
+all: genome simulate download trim index align index_bam stats filter variants annotate
 	@echo "All steps, including variant annotation, are complete!"
