@@ -72,3 +72,13 @@ Ensure that all required tools are installed and available.
 Verify the design.csv file and SRA accessions are correct.
 
 Check if the reference genome files are downloaded properly.
+
+------
+
+I kept getting this error:
+
+	Failed to open the annotation file genome_index/genome.gff, or its format is incorrect, or it contains no 'exon' features.
+	make: *** [HW12.mak:61: generate_counts] Error 255
+And after troubleshooting for days I had to eventually call it quits. I have no idea why it keeps saying this. Because of this, I cannot make the count matrix unfortunately, but I can examine the data in IGV.
+
+(Image here)
