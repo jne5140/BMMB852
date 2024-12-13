@@ -115,7 +115,7 @@ This command in R shows that none of the simulated gene values in the matrix wer
       significant_genes <- subset(results, adj.P.Val < 0.05)
       cat("Number of significant genes:", nrow(significant_genes), "\n")
 
-I then decided to examine the most significantly changed genes:
+I then decided to examine the most significantly changed genes,
 
       top_genes <- head(results[order(results$adj.P.Val), ], 10)
       print(top_genes)
