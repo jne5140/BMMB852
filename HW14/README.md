@@ -123,7 +123,8 @@ I then decided to examine the most significantly changed genes:
 
 which gave me this output:
 
-(insert image here)
+![image](https://github.com/user-attachments/assets/017cb46f-293e-4d96-9375-24e3ffd38d57)
+
 
 There were a total of 1000 simulated genes analyzed. The expression levels show a range of values, with some genes showing substantial changes in expression, such as Gene793 (upregulated with a logFC of 892) and Gene238 (downregulated with a logFC of -497). Most genes have very low p-values, suggesting that the differential expression results are statistically significant, although a few genes, like Gene352 and Gene422, have adjusted p-values slightly above the typical significance threshold of 0.05 (0.106 and 0.107, respectively). This indicates that the results for these genes may be less reliable due to the large amount f genes analyzed. Overall, the data seems reliable-ish, but further validation (such as biological replication) is recommended to confirm the findings.
 
