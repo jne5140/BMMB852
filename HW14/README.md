@@ -128,3 +128,5 @@ There were a total of 1000 simulated genes analyzed. The expression levels show 
 The PCA plot conditions appear to be properly separated, further indicating that the data is valid.
 
 The heatmap also reflects that the data is reliable as there is clear clustering. 
+
+Note: Thank you Dr. Albert for being such a wonderful professor! Although I struggled with this class as I have no coding background whatsoever and thought this would be a fun elective, I learned so much and can honestly say this class is one of my favorites and will be one of the ones I'll remember when looking back on my college years. Thank you so much and have a wonderful break!
