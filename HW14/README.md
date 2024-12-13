@@ -106,7 +106,8 @@ I used the limma (Linear Models for Microarray Data) package for identifying gen
 ![image](https://github.com/user-attachments/assets/29b8f092-b036-4944-b1ea-8e8f16a0b6cc)
 
 
-(heatmap image here)
+![image](https://github.com/user-attachments/assets/d08e6496-6d09-4107-9b21-6afd956d361b)
+
 
 This command in R shows that none of the simulated gene values in the matrix were statistically significant (differentially expressed), as the output was 0.
 
