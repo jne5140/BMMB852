@@ -103,7 +103,8 @@ on my terminal, which gave me the `simulated_count_matrix.csv` and `design.csv` 
 
 I used the limma (Linear Models for Microarray Data) package for identifying genes/transcripts that show differential expression.
 
-(PCA plot image here)
+![image](https://github.com/user-attachments/assets/29b8f092-b036-4944-b1ea-8e8f16a0b6cc)
+
 
 (heatmap image here)
 
